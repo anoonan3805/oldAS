@@ -1,0 +1,50 @@
+<ion-view view-title="My Profile" hide-back-button="false">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear icon ion-edit" ng-click="goUser(user)">
+            
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+
+            
+                <!--this card contains the user profile infomration-->
+                <div class="card">
+                    <!--user name and profile pic displayed here -->
+                    <div class="item item-avatar">
+                        <img ng-src="../img/etienne.jpg">
+                        <h2>Etienne de Bruin</h2>
+                        
+                    </div>
+                    <!--user details in the card body here-->
+                    <div class="item item-body">
+                        <p>
+                             
+                            <b>Phone Number</b> (123) 456-7890<br> 
+                            <b>Email</b> etdebruin@gmail.com
+                        </p>
+                    </div>
+                </div>
+                
+                </center>
+            
+            <br><br><br>
+        
+        <ion-tabs class="tabs-balanced tabs-icon-top">
+
+  <ion-tab title="Sessions" icon-on="ion-ios-calendar" icon-off="ion-ios-calendar-outline" ui-sref="ClientLanding">
+     <!--Tab 1 content -->
+  </ion-tab>
+
+  <ion-tab title="To-do" icon-on="ion-ios-list" icon-off="ion-ios-list-outline" ui-sref="ClientTodo">
+     <!--Tab 2 content -->
+  </ion-tab>
+
+  <ion-tab title="Me" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" ui-sref="ClientMyProfile">
+     <!--Tab 3 content -->
+  </ion-tab>
+
+</ion-tabs>
+        
+    
+    </ion-content>
+    </ion-vew>
