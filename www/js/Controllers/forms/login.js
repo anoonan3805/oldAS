@@ -27,10 +27,10 @@ angular.module('starter.controllers')
         else {
           $ionicHistory.nextViewOptions({
             disableBack: true
-          })
-          $rootScope.$broadcast('request:firms');
+          });
+          // $rootScope.$broadcast('request:firms');
 
-          $state.go('app.lobby');
+          // $state.go('app.lobby');
         }
       }
 
@@ -49,13 +49,13 @@ angular.module('starter.controllers')
         }
       }
 
-      function retryLogin(form) {
-        return SSFTranslateService.showConfirm("ERROR.TITLE", "ERROR.SOME_RETRY_ERROR")
-          .then(function(res) {
-            if (res)
-              $scope.doLogin(form);
-          });
-      }
+      // function retryLogin(form) {
+      //   return SSFTranslateService.showConfirm("ERROR.TITLE", "ERROR.SOME_RETRY_ERROR")
+      //     .then(function(res) {
+      //       // if (res)
+      //       //   $scope.doLogin(form);
+      //     });
+      // }
 
 
       $scope.loginData = {};
@@ -85,36 +85,50 @@ angular.module('starter.controllers')
       
       
        
-      
+      $scope.loginData ={};
+      console.log($scope.loginData);
       
       
 
       $scope.loginFormPromus = function(form) {
         if (!form.$valid)
-          return SSFTranslateService.showAlert("ERROR.TITLE", "ERROR.INCOMPLETE_FORM");
+        
+        return SSFTranslateService.showAlert("ERROR.TITLE", "ERROR.INCOMPLETE_FORM");
         var dateToSend = new Date();
         $scope.loginData.lastLog = dateToSend.toUTCString();
+        
+        
         SSFUsersREST.login($scope.loginData)
           .then(function(response) {
+            
+            if (response.status === 200){
+                $state.go('tabs.TherapistLanding');
+              }
+
               //If the data is null, it means there is no internet connection.
               if (response.data === null)
                 return SSFTranslateService.showAlert("ERROR.TITLE", "ERROR.INTERNET_CONNECTION");
-              if (response.status !== 200)
-                return retryLogin(form);
+           
+              // if (response.status !== 200)
+              //   return retryLogin(form);
 
               // $ionicAnalytics.setGlobalProperties({
               //   ZibID: response.data.userId
-              // });
-
+              // });\
+              
               //reset form
               $scope.loginData.password = "";
               form.$setPristine();
 
               setLocalStorage(response.data);
+              
+              
             },
             function(err) {
-              retryLogin(form);
-            });
+              // retryLogin(form);
+            }
+            
+            );
       };
 
 
@@ -125,7 +139,7 @@ angular.module('starter.controllers')
 
 
 
- $scope.goRegisterPage = function() {
+            $scope.goRegisterPage = function() {
                 $state.go('register');
             };
 

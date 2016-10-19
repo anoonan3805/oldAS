@@ -3,6 +3,14 @@ angular.module('starter.controllers')
         '$translate', '$rootScope', '$q', 'SSFUsersREST', 'SSFTranslateService', 'SSFConfigConstants',
         function($scope, $http, $state, $window, $ionicHistory,$translate, $rootScope,
         $q, SSFUsersREST, SSFTranslateService, SSFConfigConstants) {
+        
+        $scope.type = {};
+            
+    $scope.selected = function(type){
+     $scope.type = type;   
+     console.log($scope.type);
+     console.log(type);
+    };
     
     function prepData() {
         $scope.registerData.language = $translate.use();
@@ -32,17 +40,17 @@ angular.module('starter.controllers')
                 disableAnimate: false,
                 disableBack: true
             });
-            return $state.go('app.lobby');
+            return $state.go('/tabs.TherapistLanding');
         // });
     }
     
-    function retryRegister(form) {
-        return SSFTranslateService.showConfirm("ERROR.TITLE", "ERROR.SOME_RETRY_ERROR")
-        .then(function(res) {
-            if(res)
-                $scope.submitRegisterForm(form);
-        });
-    }
+    // function retryRegister(form) {
+    //     return SSFTranslateService.showConfirm("ERROR.TITLE", "ERROR.SOME_RETRY_ERROR")
+    //     .then(function(res) {
+    //         if(res)
+    //             $scope.submitRegisterForm(form);
+    //     });
+    // }
     
     $scope.registerData = {'hasAcceptedEULA': false};
     
@@ -75,6 +83,10 @@ angular.module('starter.controllers')
         prepData();
         SSFUsersREST.create($scope.registerData)
         .then(function(response) {
+            if(response.status === 200){
+                $state.go('tabs.TherapistLanding');
+            }
+                
             if(response.status === 204)
                 return SSFTranslateService.showAlert('ERROR.TITLE', 'ERROR.EMAIL_TAKEN');
             if(response.status !== 200)
@@ -87,7 +99,7 @@ angular.module('starter.controllers')
         }, function(err) {
             if(err.status === 204)
                 return SSFTranslateService.showAlert('ERROR.TITLE', 'ERROR.EMAIL_TAKEN');
-            retryRegister(form);
+            // retryRegister(form);
         });
         $rootScope.$broadcast('request:firms');
     };

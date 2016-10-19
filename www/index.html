@@ -23,8 +23,14 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-    <!-- ionic/angularjs js -->
+    
+      <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
+    <!--<script src="lib/ionic-material/dist/ionic.material.min.js"></script>-->
+    <script src="lib/angular-translate/angular-translate.js"></script>
+    <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -47,10 +53,15 @@
     <script src="js/SSFServices/SSFSpinner.js"></script>
     <script src="js/SSFServices/SSFTranslate.js"></script>
 
+    <!--RESTAPis-->
+    <script src="js/RESTApis/UsersRest.js"></script>
+    
+
+
 <!--controllers clientview-->
    <script src="js/Controllers/clientview/landing.js"></script>
     <script src="js/Controllers/clientview/profile.js"></script>
-    <script src="js/Controllers/clientview/session.js"></script>
+    <script src="js/Controllers/clientview/todo.js"></script>
     
     <!--controllers forms-->
    <script src="js/Controllers/forms/login.js"></script>
@@ -59,7 +70,10 @@
      <!--controllers therapistview-->
    <script src="js/Controllers/therapistview/landing.js"></script>
     <script src="js/Controllers/therapistview/profile.js"></script>
-    <script src="js/Controllers/therapistview/session.js"></script>
+    <script src="js/Controllers/therapistview/client.js"></script>
+    <script src="js/Controllers/therapistview/booking1.js"></script>
+    <script src="js/Controllers/therapistview/booking2.js"></script>
+
     
     <!--controllers therapistview-->
    <script src="js/Controllers/wizard/wizard.js"></script>
@@ -81,7 +95,7 @@
       </ion-header-bar>
       <ion-nav-bar class="bar-balanced">
         <ion-nav-back-button class="button-clear">
-                <i class="ion-arrow-left-c"></i> Back
+                <i class="ion-ios-arrow-back" ></i> Back
 
           {{&quot;&quot;}}
         </ion-nav-back-button>
@@ -89,7 +103,7 @@
       
       <ion-nav-view></ion-nav-view>
     </div>
-      
+
       
   </body>
 </html>

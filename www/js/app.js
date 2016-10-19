@@ -3,106 +3,182 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic','starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.translate', 'SSFConfig', 'SSFCache', 'SSFAlerts', 'SSFLogout', 'SSFFavorites', 'SSFMailComposer',
+  'SSFSpinner', 'SSFTranslate', 'RESTServices'
+])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+.run(["$ionicPlatform", '$window', '$ionicHistory', '$state', '$rootScope',
+    function($ionicPlatform, $window, $ionicHistory, $state, $rootScope) {
 
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
-      cordova.plugins.Keyboard.disableScroll(true);
+      $ionicPlatform.ready(function() {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if (window.cordova && window.cordova.plugins.Keyboard) {
+          cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
+          cordova.plugins.Keyboard.disableScroll(true);
+        }
+        if (window.StatusBar) {
+          // org.apache.cordova.statusbar required
+          StatusBar.styleDefault();
+        }
+        // Ionic.io();
+        // //Dispatch interval, how often do we want our events to be sent to analytics. Default is 30 sec
+        // if($window.localStorage["userId"]) {
+        //   $ionicAnalytics.setGlobalProperties({
+        //     ZibID: $window.localStorage["userId"]
+        //   });
+        // }
+      });
     }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
-})
-.config(['$stateProvider', '$urlRouterProvider',
+  ])
+  .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('wizard');
       $stateProvider
-      
+
       //wizards folder
         .state('wizard', {
           url: '/wizard',
           templateUrl: 'templates/wizard/wizard.html',
-          // controller: 'wizardCtrl'
-        })
-        .state('app.wizard', {
-          url: '/wizard',
-          templateUrl: 'templates/wizard/wizard.html',
-          // controller: 'wizardCtrl'
+          controller: 'wizardCtrl'
         })
         //forms
         .state('login', {
           url: '/login',
           templateUrl: 'templates/forms/login.html',
-          // controller: 'LoginCtrl'
+          controller: 'LoginCtrl'
         })
         .state('register', {
           url: '/register',
           templateUrl: 'templates/forms/register.html',
-          // controller: 'RegisterCtrl'
+          controller: 'RegisterCtrl'
         })
         //Therapist
-        .state('TherapistMyProfile', {
-          url: '/therapistview/myProfile',
-          cache: false,
-          templateUrl: 'templates/therapistview/profile.html',
-          // controller: 'therapistviewProfileCtrl'
+        .state('tabs', {
+          // abstract:true,
+          url: '/tabs',
+          templateUrl: 'templates/therapistview/tabs.html'
         })
-        .state('TherapistLanding', {
-          url: '/therapistview/landing',
-          templateUrl: 'templates/therapistview/landing.html',
-          // controller: 'therapistviewLandingCtrl'
+        .state('tabs.TherapistProfile', {
+          url: '/TherapistProfile',
+          cache:false,
+           views: {
+          'TherapistProfile': {
+            templateUrl: 'templates/therapistview/TherapistProfile.html',
+            controller: 'therapistviewProfileCtrl'
+          }
+
+        }
         })
-        .state('TherapistTodo', {
-          url: '/therapistview/todo',
-          templateUrl: 'templates/therapistview/todo.html',
-          // controller: 'therapistviewSessionCtrl'
+      
+        .state('tabs.TherapistLanding', {
+          url: '/TherapistLanding',
+          cache:false,
+           views: {
+          'TherapistLanding': {
+            templateUrl: 'templates/therapistview/TherapistLanding.html',
+            controller: 'therapistviewLandingCtrl'
+          }
+
+        }
         })
-        //Client View
-        .state('ClientMyProfile', {
-          url: '/clientview/myProfile',
-          cache: false,
-          templateUrl: 'templates/clientview/profile.html',
-          // controller: 'clientviewProfileCtrl'
+        .state('tabs.Clients', {
+          url: '/Clients',
+          cache:false,
+          views: {
+          'Clients': {
+            templateUrl: 'templates/therapistview/Clients.html',
+            controller: 'therapistviewClientCtrl'
+          }
+
+        }
         })
-        .state('ClientLanding', {
-          url: '/clientview/landing',
-          templateUrl: 'templates/clientview/landing.html',
-          // controller: 'clientviewLandingCtrl'
+        .state('/TherapistBooking', {
+          url: '/therapistview/booking',
+          templateUrl: 'templates/therapistview/booking.html',
+          controller: 'therapistviewBookingCtrl'
         })
-        .state('ClientTodo', {
-          url: '/clientview/todo',
-          templateUrl: 'templates/clientview/todo.html',
-          // controller: 'clientviewSessionCtrl'
+        .state('/Booking2', {
+          url: '/therapistview/booking2',
+          templateUrl: 'templates/therapistview/booking2.html',
+          controller: 'therapistviewBooking2Ctrl'
+
+        })
+        .state('/clientProfile', {
+          url: '/therapistview/clientProfile',
+          templateUrl: 'templates/therapistview/clientProfile.html'
+        })
+       
+        .state('/reserveOffice', {
+          url: '/therapistview/reserveOffice',
+          templateUrl: 'templates/therapistview/reserveOffice.html',
         })
 
-        //Debugging Navigation
-        .state('navigation', {
-          url: '/navigation',
-          template: '<ion-view hide-nav-bar="false" title="Navigation">' +
-            '<ion-nav-buttons></ion-nav-buttons>' +
-            '<ion-content class="padding">' +
-            '<button class="button button-block button-calm ssf-button" ng-repeat="nav in navLinks" ui-sref="{{nav}}">{{nav}}</button>' +
-            '</ion-content>' +
-            '</ion-view>',
-          controller: function($state, $scope) {
-            var stateArray = $state.get();
-            $scope.navLinks = [];
-            for (var i in stateArray) {
-              if (stateArray[i].name !== '' && stateArray[i].name !== 'navigation' && stateArray[i].name !== 'update') {
-                $scope.navLinks.push(stateArray[i].name);
-              }
-            }
-            $scope.navLinks.sort();
+      //Client View
+      .state('clientTabs',{
+        // abstract:true,
+        url: '/clientTabs',
+       templateUrl:'templates/clientview/clientTabs.html'
+       })
+  
+      .state('clientTabs.profile', {
+          url: '/profile',
+          cache: false,
+          views:{
+          'profile': {
+          templateUrl: 'templates/clientview/profile.html',
+          controller: 'clientviewProfileCtrl'
           }
-        });
+          }
+        })
+          .state('clientTabs.todo', {
+          url: '/todo',
+          cache:false,
+          views: {
+            'todo':{
+             templateUrl: 'templates/clientview/todo.html',
+              controller: 'clientviewTodoCtrl'
+            }
+          }
+        })
+        .state('clientTabs.landing', {
+          url:'/landing',
+          cache:false,
+          views: {
+            'landing':{
+              templateUrl: 'templates/clientview/landing.html',
+             controller: 'clientviewLandingCtrl'
+            }
+          }
+        })
+       .state('reserveSession', {
+          url: '/therapistview/reserveSession',
+          templateUrl: 'templates/clientview/reserveSession.html',
+        })
+        .state('sessionRequest', {
+          url: '/clientview/sessionRequest',
+          templateUrl:'templates/clientview/sessionRequest.html',
+        })
+
+      //Debugging Navigation
+      .state('navigation', {
+        url: '/navigation',
+        template: '<ion-view hide-nav-bar="false" title="Navigation">' +
+          '<ion-nav-buttons></ion-nav-buttons>' +
+          '<ion-content class="padding">' +
+          '<button class="button button-block button-calm ssf-button" ng-repeat="nav in navLinks" ui-sref="{{nav}}">{{nav}}</button>' +
+          '</ion-content>' +
+          '</ion-view>',
+        controller: function($state, $scope) {
+          var stateArray = $state.get();
+          $scope.navLinks = [];
+          for (var i in stateArray) {
+            if (stateArray[i].name !== '' && stateArray[i].name !== 'navigation' && stateArray[i].name !== 'update') {
+              $scope.navLinks.push(stateArray[i].name);
+            }
+          }
+          $scope.navLinks.sort();
+        }
+      });
     }
   ]);

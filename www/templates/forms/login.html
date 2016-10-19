@@ -1,11 +1,25 @@
 <ion-view view-title="Any Session">
   <ion-content class="padding" style="background-image: url('../img/Any Session.jpg'); background-size: cover" scroll="false">
+<center>
+      <!--search for users by tab-->
+      <button class="button button-clear button-positive" ng-click="selected('therapist')" ng-class="active">Therapist
+        </button>
+
+      <button class="button button-clear button-positive" ng-click="selected('client')" ng-class="active">Client
+        </button>
+     
+    </center>
+
 <br><br><br>
-    <form name="loginForm" ng-submit="signInForm(loginForm)" novalidate>
+
+    <form name="loginForm" ng-submit="loginFormPromus(loginForm)" novalidate>
+      
+      
+      
       <label class="item item-input" ng-class="{ 'has-errors' : loginForm.email.$invalid && loginForm.$submitted}">
-                    <input name="email" type="email" placeholder="Email" ng-model="user.email" required></label>
+                    <input name="email" type="email" placeholder="Email" ng-model="loginData.email" required></label>
       <label class="item item-input" ng-class="{ 'has-errors' : loginForm.password.$invalid && loginForm.$submitted}">
-                    <input name="Password" type="password" placeholder="Password" ng-model="user.password" required></label><br>
+                    <input name="Password" type="password" placeholder="Password" ng-model="loginData.password" required></label><br>
       
       <button class="button button-block button-balanced" type="submit">
           Sign In
@@ -15,8 +29,8 @@
 
 
     <center>If you are not a registered user click below to create an account!</center>
-    <button class="button button-block button-balanced" ui-sref="register">
-          Create Account
+    <button class="button button-block button-balanced" type="button" ng-click='goRegisterPage()'>
+          {{'FORMS.BUTTONS.REGISTER' | translate}}
         </button>
     </div>
   </ion-content>

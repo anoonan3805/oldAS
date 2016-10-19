@@ -1,11 +1,11 @@
 angular.module("RESTServices", [])
 .service('SSFUsersREST', ['SSFConfigConstants', '$http',
         function(SSFConfigConstants, $http) {
-    var path = 'AnySessionUsers/',
+    var path = 'Therapists/',
     service = this;
    
    
-     var apiUrl = SSFConfigConstants.EndpointUrl.url  + "AnySessionUsers";
+     var apiUrl = SSFConfigConstants.EndpointUrl.url  + "Therapists";
     function getUrl() {
         return SSFConfigConstants.EndpointUrl.url + path;
     }
