@@ -1,0 +1,25 @@
+{
+    "firstName":"Dr.",
+    "lastName":"Phil",
+    "phoneNumber":"123-456-7845",
+    "type":"pych",
+    "id":"12345",
+    "clientId":["56890", "58458","58459" ,"57549","58543"]
+},
+{
+    "firstName":"Kathryn"
+    "lastName":"De Bruin"
+    "phoneNumber":"123-456-7891",
+    "type":"pych",
+    "id":"67891",
+    "clientId":["56543","54344","54321","54335","45665"]
+},
+{
+    "firstName":"Etienne"
+    "lastName":"De Bruin"
+    "phoneNumber":"123-456-7899",
+    "type":"pych",
+    "id":"45678",
+    "clientId":["87654","87456","34589","34546","46950"]
+}
+

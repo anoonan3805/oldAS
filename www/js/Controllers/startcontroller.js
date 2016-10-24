@@ -2,4 +2,4 @@
 /*global angular*/
 /*global Ionic*/
 
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', []);

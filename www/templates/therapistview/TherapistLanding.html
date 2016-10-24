@@ -1,15 +1,20 @@
-<ion-view view-title="TherapistLanding">
+<ion-view view-title="TherapistLanding" hide-back-button="false">
+          <ion-nav-buttons side="right">
+              </ion-nav-buttons>
+
     <ion-content class="has-footer">
-        <center><h1>Welcome, Kathryn!</h1><br>
-        <p>Here are todays appointments:</p><br><br>
+        <center><h1>Welcome, Kathryn!</h1>
+        <h3>Here are todays appointments:</h3>
         <div class="list list-inset">
-            <div class="item">9:00am  Ben Patrick</div>
-            <div class="item">11:30am Mark Maxwell</div>
-            <div class="item">1:30pm  Renee Lewis</div>
-            <div class="item">3:00pm  Etienne de Bruin</div>
-        </div><br>
-        
-        <p>Calendar | Booking</p>
+            <div class="item">9:00am  Ben Patrick  Office 13 Mission Valley</div>
+            <div class="item">11:30am Mark Maxwell Office 13 Mission Valley</div>
+            <div class="item">1:30pm  Renee Lewis  Office 13 Mission Valley</div>
+            <div class="item" ui-sref='/clientProfile'>3:00pm  Etienne de Bruin  Office 13 Mission Valley</div>
+        </div>
+        </center><br>
+        <center>
+        <button class="button button-balanced" ui-sref='/TherapistBooking'>Book a Session</button><br><br>
+        <button class="button button-balanced" ui-sref="/Sessions">Sessions</button>
         </center>
         <br><br><br>
     </ion-content>

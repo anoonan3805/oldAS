@@ -8,8 +8,12 @@ angular.module('starter.controllers')
             
     $scope.selected = function(type){
      $scope.type = type;   
-     console.log($scope.type);
-     console.log(type);
+      if($scope.type === "therapist"){
+        $state.go("tabs.TherapistLanding");
+      }else{
+        $state.go("clientTabs.landing");
+      }
+
     };
     
     function prepData() {

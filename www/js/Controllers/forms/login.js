@@ -1,8 +1,6 @@
 angular.module('starter.controllers')
-  .controller('LoginCtrl', ["$scope", "$window", "$state", "$ionicHistory", "$rootScope",
-    'SSFUsersREST', 'SSFTranslateService', '$http',
-    function($scope, $window, $state, $ionicHistory, $rootScope, SSFUsersREST,
-      SSFTranslateService, $http) {
+  .controller('LoginCtrl', ["$scope", "$window", "$state", "$ionicHistory", "$rootScope", 'SSFTranslateService', '$http','SSFUsersREST',
+    function($scope, $window, $state, $ionicHistory, $rootScope,SSFTranslateService, $http,SSFUsersREST) {
 
       //sets current user's information **make sure this function mirrors the RegisterCtrl function**
       function setLocalStorage(data) {
@@ -62,7 +60,15 @@ angular.module('starter.controllers')
 
       $scope.checkbox = {};
 
+      $scope.selected = function(type){
+     $scope.type = type;   
+      if($scope.type === "therapist"){
+        $state.go("tabs.TherapistLanding");
+      }else{
+        $state.go("clientTabs.landing");
+      }
 
+    };
 
 
       if ($window.localStorage["email"] !== undefined && $scope.checkbox.rememberMe === true)

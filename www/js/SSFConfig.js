@@ -33,7 +33,7 @@ angular.module('SSFConfig', [])
 .config(['SSFConfigConstants', function(SSFConfigConstants) {
     SSFConfigConstants['EndpointUrl'] = {
 
-     'url': 'https://anysession-anoonan3805.c9users.io:8080/api/'
+     'url': 'https://anysession-bk-anoonan3805.c9users.io:8080/api/'
     };
 }])
 .config(['SSFConfigConstants', function(SSFConfigConstants) {

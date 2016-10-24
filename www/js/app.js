@@ -1,3 +1,4 @@
+
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -113,6 +114,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.transla
           url: '/therapistview/reserveOffice',
           templateUrl: 'templates/therapistview/reserveOffice.html',
         })
+        .state('/Messages', {
+            url: '/therapistview/Messages',
+            templateUrl: 'templates/therapistview/Messages.html',
+        })
+        .state('/Messaging',{
+            url:'therpistview/Messaging',
+            templateUrl: 'templates/therapistview/Messaging.html',
+        })
+        .state('/Sessions', {
+            url: '/therapistview/Sessions',
+            templateUrl: 'templates/therapistview/Sessions.html',
+            controller:'therapistviewSessionCtrl'
+        })
+        .state('/addNewClient', {
+            url:'/therapistview/addNewClient',
+            templateUrl: 'templates/therapistview/addNewClient.html',
+        })
+        .state('/history', {
+            url: 'therapistview/history',
+            templateUrl: 'templates/therapistview/history.html',
+        })
 
       //Client View
       .state('clientTabs',{
@@ -181,4 +203,4 @@ angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.transla
         }
       });
     }
-  ]);
+]);

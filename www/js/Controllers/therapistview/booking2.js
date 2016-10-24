@@ -4,6 +4,8 @@ angular.module('starter.controllers')
     function($scope, $window, $state, $ionicHistory, $rootScope, SSFUsersREST,
       SSFTranslateService, $http) {
       
-          
+          $scope.goToOffice = function(){
+          $state.go('/TherapistBooking');
+          };
       }   
   ]);

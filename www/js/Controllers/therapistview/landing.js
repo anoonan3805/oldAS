@@ -4,6 +4,8 @@ angular.module('starter.controllers')
     function($scope, $window, $state, $ionicHistory, $rootScope, SSFUsersREST,
       SSFTranslateService, $http) {
       
-          
+          $scope.goToSessions = function(){
+            $state.go('Sessions');
+          };
       }   
   ]);

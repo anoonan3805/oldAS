@@ -1,6 +1,11 @@
 angular.module('starter.controllers')
-    .controller('wizardCtrl', ['$scope','$ionicSlideBoxDelegate','$state','SSFConfigConstants',
-        function($scope,$ionicSlideBoxDelegate,$state,SSFConfigConstants) {
+    .controller('wizardCtrl', ['$scope','$ionicSlideBoxDelegate','$state','SSFConfigConstants','sessionsREST',
+        function($scope,$ionicSlideBoxDelegate,$state,SSFConfigConstants,sessionsREST) {
+            
+            sessionsREST.getSessions().then(function(response){
+                $scope.data=response;
+                console.log(response);
+            });
 
             $scope.startApp = function() {
                 $state.go('login');
