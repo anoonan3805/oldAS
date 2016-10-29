@@ -1,0 +1,92 @@
+<ion-view view-title="Book" hide-back-button="false">
+  <ion-nav-buttons side="right">
+
+  </ion-nav-buttons>
+
+  <ion-content class="has-footer">
+
+
+
+
+    <div class="list list-inset">
+      <label class="item"> <b>Office Location</b><br> Any Session Headquarters, 2851 Camino del Rio South San Diego, CA 92108
+    </label></div>
+
+
+    <div class="list list-inset">
+      <label class="item item-input">
+    <i class="icon ion-calendar placeholder-icon"></i>
+    <!--<ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" ngModel="bookingInfo.reservedfromDate"></ion-datetime>-->
+    <input ng-model="bookingInfo.reservedfromDate" type="date" placeholder="Date"></input>
+  </label><br>
+    </div>
+
+
+    <div class="list list-inset">
+
+      <label class="item item-input item-select">
+    <div class="input-label">
+    Hour
+    </div>
+    <select ng-model="bookingInfo.hour" >
+      <option ng-repeat="hour in hours" type="time"> {{hour.hour}}</option>
+    </select>
+  </label>
+
+    </div>
+
+
+
+    <!--<select ng-model="selectedBooking" name="bookingInfo">-->
+    <!--   <option value="" disabled selected>Select your booking time</option>-->
+    <!--   <option value="{{info.hour}}" ng-repeat="info in bookingInfo" type="time">{{info.hour}}</option>-->
+    <!-- </select>-->
+    <!-- <div style="margin-top:20px">Selected time: {{selectedBooking ? selectedBooking : 'none'}}</div>-->
+
+
+    <div class="list list-inset">
+      <label class="item item-input item-select">
+    <div class="input-label">
+      Room
+    </div>
+    <select ng-model="bookingInfo.officeName">
+      <option ng-repeat= "office in officesArray" ng-value="office.name">{{office.officeName}}</option>
+    </select>
+
+</label>
+    </div>
+
+
+    <!--<div class="item item-icon-left" ion-datetime-picker ng-model="datetimeValue">-->
+    <!--                <i class="icon ion-ios-calendar balanced"></i>-->
+    <!--                Basic datetime picker:-->
+    <!--                <strong>{{datetimeValue| date: "yyyy-MM-dd H:mm"}}</strong>-->
+    <!--            </div>-->
+
+    <br>
+    <button class="button button-block button-balanced" ng-click="setBooking()">
+  Reserve
+</button>
+
+
+    <!--{{test}}-->
+  </ion-content>
+  <ion-tabs class="tabs-balanced tabs-icon-top">
+
+    <ion-tab title="TherapistLanding" icon-on="ion-ios-calendar" icon-off="ion-ios-calendar-outline" ui-sref="tabs.TherapistLanding">
+      <ion-nav-view name="TherapistLanding"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Clients" icon-on="ion-ios-people" icon-off="ion-ios-people-outline" ui-sref="tabs.Clients">
+      <ion-nav-view name="Clients"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="TherapistProfile" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" ui-sref="tabs.TherapistProfile">
+      <ion-nav-view name="TherapistProfile"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Messages" icon-on="ion-ios-email" icon-off="ion-ios-email-outline" ui-sref="tabs.Messages">
+      <ion-nav-view name="Messages"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+
+
+
+</ion-view>

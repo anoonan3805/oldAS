@@ -1,11 +1,10 @@
-
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.translate', 'SSFConfig', 'SSFCache', 'SSFAlerts', 'SSFLogout', 'SSFFavorites', 'SSFMailComposer',
-  'SSFSpinner', 'SSFTranslate', 'RESTServices'
+  'SSFSpinner', 'SSFTranslate', 'RESTServices', 'officeBookingservice'
 ])
 
 .run(["$ionicPlatform", '$window', '$ionicHistory', '$state', '$rootScope',
@@ -47,7 +46,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.transla
         .state('login', {
           url: '/login',
           templateUrl: 'templates/forms/login.html',
-          controller: 'LoginCtrl'
+          controller: 'loginCtrl'
         })
         .state('register', {
           url: '/register',
@@ -62,124 +61,145 @@ angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.transla
         })
         .state('tabs.TherapistProfile', {
           url: '/TherapistProfile',
-          cache:false,
-           views: {
-          'TherapistProfile': {
-            templateUrl: 'templates/therapistview/TherapistProfile.html',
-            controller: 'therapistviewProfileCtrl'
-          }
+          cache: false,
+          views: {
+            'TherapistProfile': {
+              templateUrl: 'templates/therapistview/TherapistProfile.html',
+              controller: 'therapistProfileCtrl'
+            }
 
-        }
+          }
         })
-      
-        .state('tabs.TherapistLanding', {
-          url: '/TherapistLanding',
-          cache:false,
-           views: {
-          'TherapistLanding': {
-            templateUrl: 'templates/therapistview/TherapistLanding.html',
-            controller: 'therapistviewLandingCtrl'
-          }
 
-        }
+      .state('tabs.TherapistLanding', {
+          url: '/TherapistLanding',
+          cache: false,
+          views: {
+            'TherapistLanding': {
+              templateUrl: 'templates/therapistview/TherapistLanding.html',
+              controller: 'therapistviewLandingCtrl'
+            }
+
+          }
         })
         .state('tabs.Clients', {
           url: '/Clients',
-          cache:false,
+          cache: false,
           views: {
-          'Clients': {
-            templateUrl: 'templates/therapistview/Clients.html',
-            controller: 'therapistviewClientCtrl'
+            'Clients': {
+              templateUrl: 'templates/therapistview/Clients.html',
+              controller: 'therapistviewClientCtrl'
+            }
+
+          }
+        })
+        .state('tabs.Sessions', {
+          url: '/Sessions',
+          cache: false,
+          views: {
+            'Sessions': {
+              templateUrl: 'templates/therapistview/Sessions.html',
+              controller: 'therapistviewSessionCtrl'
+            }
           }
 
-        }
         })
-        .state('/TherapistBooking', {
-          url: '/therapistview/booking',
-          templateUrl: 'templates/therapistview/booking.html',
-          controller: 'therapistviewBookingCtrl'
+        .state('/bookOffice', {
+          url: '/therapistview/bookOffice',
+          templateUrl: 'templates/therapistview/bookOffice.html',
+          controller: 'officeBookingCtrl'
+        })
+        .state('TherapistConfirmation', {
+          url: '/therapistview/confirmation',
+          templateUrl: 'templates/therapistview/confirmation.html',
+          controller: 'confirmationCtrl'
         })
         .state('/Booking2', {
           url: '/therapistview/booking2',
           templateUrl: 'templates/therapistview/booking2.html',
-          controller: 'therapistviewBooking2Ctrl'
+          controller: 'bookingCtrl'
+
+        })
+        .state('/Bookingtest', {
+          url: '/therapistview/bookingtest',
+          templateUrl: 'templates/therapistview/bookingtest.html',
+          controller: 'bookingCtrltest'
 
         })
         .state('/clientProfile', {
           url: '/therapistview/clientProfile',
           templateUrl: 'templates/therapistview/clientProfile.html'
         })
-       
-        .state('/reserveOffice', {
+
+      .state('/reserveOffice', {
           url: '/therapistview/reserveOffice',
           templateUrl: 'templates/therapistview/reserveOffice.html',
         })
         .state('/Messages', {
-            url: '/therapistview/Messages',
-            templateUrl: 'templates/therapistview/Messages.html',
+          url: '/therapistview/Messages',
+          templateUrl: 'templates/therapistview/Messages.html',
         })
-        .state('/Messaging',{
-            url:'therpistview/Messaging',
-            templateUrl: 'templates/therapistview/Messaging.html',
-        })
-        .state('/Sessions', {
-            url: '/therapistview/Sessions',
-            templateUrl: 'templates/therapistview/Sessions.html',
-            controller:'therapistviewSessionCtrl'
-        })
-        .state('/addNewClient', {
-            url:'/therapistview/addNewClient',
-            templateUrl: 'templates/therapistview/addNewClient.html',
-        })
-        .state('/history', {
-            url: 'therapistview/history',
-            templateUrl: 'templates/therapistview/history.html',
+        .state('/Messaging', {
+          url: 'therpistview/Messaging',
+          templateUrl: 'templates/therapistview/Messaging.html',
         })
 
-      //Client View
-      .state('clientTabs',{
-        // abstract:true,
-        url: '/clientTabs',
-       templateUrl:'templates/clientview/clientTabs.html'
-       })
-  
+      .state('/addNewClient', {
+          url: '/therapistview/addNewClient',
+          templateUrl: 'templates/therapistview/addNewClient.html',
+        })
+        .state('/history', {
+          url: 'therapistview/history',
+          templateUrl: 'templates/therapistview/history.html',
+        })
+        .state('/editMyProfile', {
+          url: '/therapistview/editMyProfile',
+          templateUrl: 'templates/therapistview/editMyProfile.html',
+        })
+        //Client View
+        .state('clientTabs', {
+          // abstract:true,
+          url: '/clientTabs',
+          templateUrl: 'templates/clientview/clientTabs.html'
+        })
+
       .state('clientTabs.profile', {
           url: '/profile',
           cache: false,
-          views:{
-          'profile': {
-          templateUrl: 'templates/clientview/profile.html',
-          controller: 'clientviewProfileCtrl'
-          }
+          views: {
+            'profile': {
+              templateUrl: 'templates/clientview/profile.html',
+              controller: 'clientviewProfileCtrl'
+            }
           }
         })
-          .state('clientTabs.todo', {
-          url: '/todo',
-          cache:false,
+        .state('clientTabs.messages', {
+          url: '/messages',
+          cache: false,
           views: {
-            'todo':{
-             templateUrl: 'templates/clientview/todo.html',
-              controller: 'clientviewTodoCtrl'
+            'messages': {
+              templateUrl: 'templates/clientview/messages.html',
+              controller: 'clientviewMessagesCtrl'
             }
           }
         })
         .state('clientTabs.landing', {
-          url:'/landing',
-          cache:false,
+          url: '/landing',
+          cache: false,
           views: {
-            'landing':{
+            'landing': {
               templateUrl: 'templates/clientview/landing.html',
-             controller: 'clientviewLandingCtrl'
+              controller: 'clientviewLandingCtrl'
             }
           }
         })
-       .state('reserveSession', {
+        .state('reserveSession', {
           url: '/therapistview/reserveSession',
           templateUrl: 'templates/clientview/reserveSession.html',
         })
         .state('sessionRequest', {
           url: '/clientview/sessionRequest',
-          templateUrl:'templates/clientview/sessionRequest.html',
+          templateUrl: 'templates/clientview/sessionRequest.html',
         })
 
       //Debugging Navigation
@@ -203,4 +223,4 @@ angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.transla
         }
       });
     }
-]);
+  ]);
