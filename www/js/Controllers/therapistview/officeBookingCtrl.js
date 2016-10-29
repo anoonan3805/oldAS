@@ -19,9 +19,9 @@ angular.module('starter.controllers')
     };
  $scope.bookingInfo.reservedby="Jadon Parker";
  $scope.bookingInfo.officeId;
- $scope.bookingInfo.reservedfromDate;
+$scope.bookingInfo.reservedfromDate;
  $scope.bookingInfo.hour;
- $scope.bookingInfo.officeName;
+// $scope.bookingInfo.officeName;
  
  
  
@@ -36,17 +36,19 @@ angular.module('starter.controllers')
    
         officeBookingservice.setbookingInfo($scope.bookingInfo);
   
-        $state.go('/TherapistConfirmation')
+        $state.go('TherapistConfirmation');
  };
  
-console.log($scope.bookingInfo.hour);
- 
+//forcing the booking page to have a back button since this non-tab page is navigated to from a tab page
+// $scope.goBack = function(){
+//     $ionicHistory.goBack();
+// };
      
      
      
       officeBookingservice.setbookingInfo($scope.bookingInfo);
       $scope.test = officeBookingservice.getbookingInfo();
-      
+  
     
        
       $scope.officesArray = [{
@@ -66,8 +68,5 @@ console.log($scope.bookingInfo.hour);
     
 
 
-      $scope.goToOffice = function() {
-        $state.go('/TherapistBooking');
-      };
     }
   ]);

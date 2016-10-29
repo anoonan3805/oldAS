@@ -1,55 +1,24 @@
 <ion-view view-title="Confirmation" hide-back-button="false">
     <ion-nav-buttons side="right">
-        
     </ion-nav-buttons>
     <ion-content>
-        
         <h1 class="padding">Office Reserved!</h1><br>
-        <p class="padding">You've booked the following session(s) in {{room}} on {{date | date:'fullDate'}}.</p>
-
-            
-  <p class="padding">{{time}}</p><br>
-  
-  <!--<p class="padding">Your total is:</p>-->
-  
-<!--  <div class="list list-inset">-->
-<!--  <label class="item">-->
-<!--    <i class="icon ion-social-usd placeholder-icon"></i>-->
-<!--    100-->
-<!--  </label>-->
-<!--</div><br><br><br>-->
-
-<!--  <ion-tabs class="tabs-balanced tabs-icon-top">-->
-
-<!--  <ion-tab title="Sessions" icon-on="ion-ios-calendar" icon-off="ion-ios-calendar-outline" ui-sref="TherapistLanding">-->
-<!--     Tab 1 content -->
-<!--  </ion-tab>-->
-
-<!--  <ion-tab title="Clients" icon-on="ion-ios-people" icon-off="ion-ios-people-outline" ui-sref="Clients">-->
-<!--     Tab 2 content -->
-<!--  </ion-tab>-->
-
-<!--  <ion-tab title="Me" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" ui-sref="TherapistMyProfile">-->
-<!--     Tab 3 content -->
-<!--  </ion-tab>-->
-
-<!--</ion-tabs>-->
-        
-    
+            <p class="padding">You've booked the following session(s) in {{room}} on {{date | date:'fullDate'}}.</p>
+        <p class="padding">{{time}}</p><br>
     </ion-content>
-    <ion-tabs class="tabs-balanced tabs-icon-top">
+         <ion-tabs class="tabs-balanced tabs-icon-top">
 
     <ion-tab title="TherapistLanding" icon-on="ion-ios-calendar" icon-off="ion-ios-calendar-outline" ui-sref="tabs.TherapistLanding">
-          <ion-nav-view name="TherapistLanding"></ion-nav-view>
+      <ion-nav-view name="TherapistLanding"></ion-nav-view>
     </ion-tab>
     <ion-tab title="Clients" icon-on="ion-ios-people" icon-off="ion-ios-people-outline" ui-sref="tabs.Clients">
-           <ion-nav-view name="Clients"></ion-nav-view>
+      <ion-nav-view name="Clients"></ion-nav-view>
     </ion-tab>
     <ion-tab title="TherapistProfile" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" ui-sref="tabs.TherapistProfile">
-           <ion-nav-view name="TherapistProfile"></ion-nav-view>
+      <ion-nav-view name="TherapistProfile"></ion-nav-view>
     </ion-tab>
     <ion-tab title="Messages" icon-on="ion-ios-email" icon-off="ion-ios-email-outline" ui-sref="tabs.Messages">
-           <ion-nav-view name="Messages"></ion-nav-view>
+      <ion-nav-view name="Messages"></ion-nav-view>
     </ion-tab>
-</ion-tabs>
-    </ion-view>
+  </ion-tabs>
+ </ion-view>

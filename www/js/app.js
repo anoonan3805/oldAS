@@ -107,6 +107,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.transla
         .state('/bookOffice', {
           url: '/therapistview/bookOffice',
           templateUrl: 'templates/therapistview/bookOffice.html',
+          cache:false,
           controller: 'officeBookingCtrl'
         })
         .state('TherapistConfirmation', {
@@ -128,7 +129,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.transla
         })
         .state('/clientProfile', {
           url: '/therapistview/clientProfile',
-          templateUrl: 'templates/therapistview/clientProfile.html'
+          templateUrl: 'templates/therapistview/clientProfile.html',
+          controller: 'therapistviewClientProfileCtrl'
         })
 
       .state('/reserveOffice', {
