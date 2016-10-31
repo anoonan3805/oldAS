@@ -33,7 +33,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.transla
   ])
   .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
-      $urlRouterProvider.otherwise('wizard');
+      $urlRouterProvider.otherwise('login');
       $stateProvider
 
       //wizards folder

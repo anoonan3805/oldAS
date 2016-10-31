@@ -2,7 +2,7 @@ angular.module('starter.controllers')
   .controller('officeBookingCtrl', ["$scope", "$window", "$state", "$ionicHistory", "$rootScope",
     'SSFUsersREST', 'SSFTranslateService', '$http','officeBookingservice',
     function($scope, $window, $state, $ionicHistory, $rootScope, SSFUsersREST,
-      SSFTranslateService, $http,officeBookingservice) {
+      SSFTranslateService, $http, officeBookingservice) {
     
 
 
@@ -40,9 +40,9 @@ $scope.bookingInfo.reservedfromDate;
  };
  
 //forcing the booking page to have a back button since this non-tab page is navigated to from a tab page
-// $scope.goBack = function(){
-//     $ionicHistory.goBack();
-// };
+$scope.goBack = function(){
+    $ionicHistory.goBack();
+};
      
      
      
