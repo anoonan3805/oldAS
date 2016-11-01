@@ -1,0 +1,41 @@
+<ion-view view-title="Add New Client">
+
+<!-- Include ion-nav-buttons in every index to avoid breaking the app (ionic material bug) -->
+    <ion-nav-back-button class="button-clear">
+                <i class="ion-ios-arrow-back" ></i> Back
+        </ion-nav-back-button>
+    <ion-content scroll="false">
+    <div class="list animate-ripple">
+        
+            
+            <form name="registerForm" class="padding" ng-submit="submitRegisterForm(registerForm)" novalidate>
+                <label class="item item-input" ng-class="{ 'has-errors' : registerData.firstName.$invalid && registerForm.$submitted}">
+                    <input name="name" type="text" placeholder="{{'FORMS.INPUTS.FIRST_NAME' | translate}}" ng-model="registerData.firstName" required>
+                </label>
+                <label class="item item-input" ng-class="{ 'has-errors' : registerData.lastName.$invalid && registerForm.$submitted}">
+                    <!--<span class="input-label">-->
+                    <!--    {{'FORMS.INPUTS.LAST_NAME' | translate}}-->
+                    <!--</span>-->
+                    <input type="text" name="name" ng-model="registerData.lastName" placeholder="{{'FORMS.INPUTS.LAST_NAME' | translate}}" required>
+                </label>
+                <label class="item item-input">
+                    <!--<span class="input-label">{{'FORMS.INPUTS.PHONE' | translate}}</span>-->
+                    <input type="text" name="phone" ng-model="registerData.phoneNumber" placeholder="{{'FORMS.INPUTS.PHONE' | translate}}">
+                </label>
+                
+                <label class="item item-input" ng-class="{ 'has-errors' : registerData.email.$invalid && registerForm.$submitted}">
+                    <!--<span class="input-label">{{'FORMS.INPUTS.EMAIL' | translate}}</span>-->
+                    <input type="email" name="email" ng-model="registerData.email" placeholder="{{'FORMS.INPUTS.EMAIL' | translate}}" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required>
+                </label>
+                
+              
+                
+                <button class="item button button-block button-balanced" type="submit" ion-track-tap="Register-tap" ion-track-data="{ mockData: 'User tapped Register'}">
+                    Add Client
+                </button>
+            </form>
+    </div>
+    </ion-content>
+</ion-view>
+
+

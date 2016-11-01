@@ -1,0 +1,57 @@
+<ion-view view-title="Client Profile" hide-back-button="false">
+    <ion-nav-buttons side="left">
+          <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+      <i class="icon ion-ios-arrow-back"> Back</i> 
+    </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <!--this card contains the user profile infomration-->
+                <div class="card">
+                    <!--user name and profile pic displayed here -->
+                    <div class="item item-avatar">
+                        <img ng-src="../img/etienne.jpg">
+                        <h2>Etienne de Bruin</h2>
+                        
+                    </div>
+                    <!--user details in the card body here-->
+                    <div class="item item-body">
+                        <p>
+                             
+                            <b>Phone Number</b> (123) 456-7890<br> 
+                            <b>Email</b> etdebruin@gmail.com <br>
+                            <b>History</b> <a ui-sref="/history">13 Sessions</a> <br>
+                            <b>Insured by</b> Blue Cross <br>
+                            
+                        </p>
+                    </div>
+                </div>
+                
+       <center> <button class="button button-balanced" ui-sref="/Messaging">
+  <i class="ion-ios-email-outline"></i> Message Etienne
+</button></center>
+            <p class="padding"> 
+            <b>Upcoming Sessions:</b><br>
+            9:00am, Tuesday, October 20th, 2016<br>
+            9:00am, Tuesday, October 27th, 2016<br><br>
+            
+            <!--<b>Etienne wants to take about these things soon:</b><br>-->
+            <!--My nightmares<br>-->
+            <!--What to tell my kid?</p>-->
+    
+    </ion-content>
+<!--    <ion-tabs class="tabs-balanced tabs-icon-top">-->
+
+<!--    <ion-tab title="TherapistLanding" icon-on="ion-ios-calendar" icon-off="ion-ios-calendar-outline" ui-sref="tabs.TherapistLanding">-->
+<!--          <ion-nav-view name="TherapistLanding"></ion-nav-view>-->
+<!--    </ion-tab>-->
+<!--    <ion-tab title="Clients" icon-on="ion-ios-people" icon-off="ion-ios-people-outline" ui-sref="tabs.Clients">-->
+<!--           <ion-nav-view name="Clients"></ion-nav-view>-->
+<!--    </ion-tab>-->
+<!--    <ion-tab title="TherapistProfile" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" ui-sref="tabs.TherapistProfile">-->
+<!--           <ion-nav-view name="TherapistProfile"></ion-nav-view>-->
+<!--    </ion-tab>-->
+<!--    <ion-tab title="Messages" icon-on="ion-ios-email" icon-off="ion-ios-email-outline" ui-sref="tabs.Messages">-->
+<!--           <ion-nav-view name="Messages"></ion-nav-view>-->
+<!--    </ion-tab>-->
+<!--</ion-tabs>-->
+</ion-view>

@@ -1,0 +1,79 @@
+<ion-view view-title="Book" hide-back-button="false">
+
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+      <i class="icon ion-ios-arrow-back"> Back</i> 
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+
+
+    <form name="bookOffice" ng-submit="setBooking(bookOffice)" novalidate>
+      <div class="list list-inset">
+        <label class="item"> <b>Office Location</b><br> Any Session Headquarters, 2851 Camino del Rio South San Diego, CA 92108
+      </label>
+      </div>
+
+      <div class="list list-inset">
+        <label class="item item-input">
+      <i class="icon ion-calendar placeholder-icon"></i>
+        <input ng-model="bookingInfo.sessionInfo.date" type="date" placeholder="Date"></input>
+      </label><br>
+      </div>
+
+      <div class="list list-inset">
+        <label class="item item-input item-select">
+      <div class="input-label">
+        Hour
+    </div>
+    <select ng-model="bookingInfo.sessionInfo.reservationInfo.hour" >
+      <option ng-repeat="hour in hours" type="time" > {{hour.hour}}</option>
+    </select>
+    </label>
+      </div>
+
+      <!--<div class="list list-inset">-->
+      <!--  <label class="item item-input item-select">-->
+      <!--  <div class="input-label">-->
+      <!--    Room-->
+      <!--  </div>-->
+      <!--  <select ng-model="bookingInfo.officeName">-->
+      <!--  <option ng-repeat= "office in officesArray" ng-value="office.name">{{office.officeName}}</option>-->
+      <!--  </select>-->
+      <!--  </label>-->
+      <!--</div>-->
+      <div class="list list-inset">
+        <label class="item item-input item-select">
+      <div class="input-label">
+        Room
+      </div>
+      <select ng-model="bookingInfo.officeName">
+      <option ng-repeat= "office in officesArray" ng-value="bookingInfo.officeId">{{office.officeName}}</option>
+      </select>
+      </label>
+      </div>
+
+      <br>
+
+      <button class="button button-block button-balanced" type="submit">
+      Reserve
+    </button>
+    </form>
+    <!--{{test}}-->
+  </ion-content>
+  <!--   <ion-tabs class="tabs-balanced tabs-icon-top">-->
+
+  <!--  <ion-tab title="TherapistLanding" icon-on="ion-ios-calendar" icon-off="ion-ios-calendar-outline" ui-sref="tabs.TherapistLanding">-->
+  <!--    <ion-nav-view name="TherapistLanding"></ion-nav-view>-->
+  <!--  </ion-tab>-->
+  <!--  <ion-tab title="Clients" icon-on="ion-ios-people" icon-off="ion-ios-people-outline" ui-sref="tabs.Clients">-->
+  <!--    <ion-nav-view name="Clients"></ion-nav-view>-->
+  <!--  </ion-tab>-->
+  <!--  <ion-tab title="TherapistProfile" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" ui-sref="tabs.TherapistProfile">-->
+  <!--    <ion-nav-view name="TherapistProfile"></ion-nav-view>-->
+  <!--  </ion-tab>-->
+  <!--  <ion-tab title="Messages" icon-on="ion-ios-email" icon-off="ion-ios-email-outline" ui-sref="tabs.Messages">-->
+  <!--    <ion-nav-view name="Messages"></ion-nav-view>-->
+  <!--  </ion-tab>-->
+  <!--</ion-tabs>-->
+</ion-view>

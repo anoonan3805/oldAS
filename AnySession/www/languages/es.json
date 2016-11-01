@@ -1,0 +1,231 @@
+{
+    "APP": {
+        "NAME": "Promus"
+    },
+    "GENERAL": {
+        "BACK": "Atras"
+
+    },
+     "FAQ": {
+            "HIDE": "Esconder",
+            "QUESTION": "Pregunta",
+            "ANSWER": "Responder"
+        },
+    
+    "REQUESTS": {
+        "ADD_AND_EDIT_REQUESTS" : "Añadir y editar solicitudes",
+        "REQUEST_LIST"    :"Lista de peticiones",
+        "REQUESTS" :  "Peticiones",
+        "PROPERTY_NAME" :  "Nombre de la propiedad",
+        "REQUEST" :  "Solicitud",
+        "StartDate" :  "Fecha de inicio",
+        "COMMENT" :  "Comentario",
+        "ISSUES" :  "Cuestiones",
+        "SEARCH" :  "Buscar",
+        "USER" :  "Usuario",
+        "NEWALERT" :  "Por favor, complete su solicitud antes de someterse .",
+        "NEWALERT2" :  "No hay datos disponibles , tratan más tarde",
+        "FINISH_BY" :  "Finalizar para",
+        "ON" :  "En",
+        "BY" :  "Por",
+        "MY_REQUESTS"  :  "Mis solicitudes",
+        "SINGLE_REQUEST_VIEW" :  "Ver única solicitur",
+        "UNIT_NUMBER"  : "Unidad de Departamento",
+        "SUBJECT"  :  "Tema", 
+        "DESCRIPTION"  :  "Descripción",
+        "PRIORITY"  :  "Prioridad",
+        "STATUS" : "Estado",
+        "ASSIGN_TO" : "Asignar a", 
+        "REQUESTOR"  :  "Solicitante", 
+        "COMP_DATE"  : "Completa para",
+        "ADD_NOTE"  :"Añadir una nota",
+        "SUBMIT"  : "Enviar",
+        "APT_NUM_PLACE"  : "Número de apartamento",
+        "PROBLEM_TEST_INFO"  : "Focos Quebrados",
+        "DATE_TEST_INFO"  : "YYYY-MM-DD",
+        "SUBJECT_PLACEHOLDER"  : "Cristal Quebrado",
+        "NOTES"  :  "Notas"
+    },
+   
+    "PROPERTIES": {
+        "FORM_ALERT" :  "Por favor complete la información requerida",
+        "ADD_AND_EDIT_PROPERTIES" : "Añadir / Modificar propiedad",
+        "PROPERTY_LIST"    :"Lista de propiedades",
+        "PROPERITES" :  "Propiedades",
+        "PROPERTY_NAME" :  "Nombre de la propiedad",
+        "PROPERTY" :  "Propiedad",
+        "OWNER" :  "Propietario",
+        "TYPE" :   "Tipo",
+        "SUBTYPE" :  "Subtipo",
+        "SEARCH" :  "Buscar",
+        "UNITS" :  "Número de unidades",
+        "DESCRIPTION" :  "Descripción",
+        "STREET_ADDRESS" :  "Dirección",
+        "COUNTRY" :  "País",
+        "STATE" :  "Estado / Territorio",
+        "CITY"  :  "Ciudad",
+        "ZIPCODE" :  "Código postal",
+        "URL"  :  "URL",
+        "SAVE_BUTTON"  : "Guardar",
+        "SINGLE_PROPERTY": "Ver la propiedad individual"
+    },
+    
+    "FIRM_USERS": {
+        "ADD_AND_EDIT_USERS" : "Añadir / editar usuarios",
+        "USERS"    : "Usuarios",
+        "FIRMS" :  "Empresa",
+        "PREF_METHOD" :  "Contacto preferido",
+        "PHONE1" :  "Teléfono 1",
+        "PHONE2" :  "Teléfono 2",
+        "TENANT" :  "Inquilino",
+        "LEAD" :  "Lider",
+        "MANAGER" :  "Gerente",
+         "WEBSITE" :  "Sitio web",
+        "EMAIL" :   "Email",
+        "SUBJECT" :   "Tema",
+        "PROPERITES" :  "Propiedades",
+        "USER_TYPE" :  "Tipo de Usuario",
+        "SUBMIT_BUTTON" :  "Enviar",
+        "SEARCH" :  "Buscar",
+        "MY_PROFILE" :  "Mi perfil",
+        "PROPERTIES" :  "Propiedades",
+        "STREET_ADDRESS" :  "Dirección",
+        "REQUESTS" :  "Peticiones",
+        "REQUEST" :  "Solicitud",
+        "CREATION_DATE" :  "Fecha de creación",
+            "ESTIMATED_DATE" :  "Fecha estimada",
+            "OF_COMPLETION" :  "de finalización",
+        "COMPLETION_DATE"  :  "Fecha de Terminación",
+        "COMPLETED_ON"  :  "Completado para",
+        "ZIPCODE" :  "Código postal",
+        "URL"  :  "Sitio web"
+       
+    },
+    
+    "ERROR": {
+        "TITLE": "Error",
+        "OFFLINE": "No se puede completar esta acción mientras está sin conexión .",
+        "INCOMPLETE_FORM": "Asegúrese de que todos los campos requeridos se rellenan .",
+        "INTERNET_CONNECTION": "Por favor, conectarse a Internet y volver a intentarlo .",
+        "ACCEPT_EULA": "Primero debe aceptar nuestro Contrato de licencia de usuario final, con el fin de registrarse con nosotros.",
+        "PASSWORDS_UNMATCHED": "Las contraseñas no coinciden.",
+        "EMAIL_TAKEN": "El correo electrónico ya ha sido utilizado .",
+        "SOME_RETRY_ERROR": "Algo salió mal , ¿le gustaría volver a intentarlo?"
+    },
+    "SSF_CONFIG_CONSTANTS": {
+        "SSF_ALERTS_SERVICE": {
+            "OKAY": "Ok",
+            "CANCEL": "Cancelar"
+        },
+        "SSF_CACHE_SERVICE": {
+            "TITLE": "Error",
+            "OFFLINE": "No hemos podido recuperar sus datos mientras está sin conexión .",
+            "UNREGISTERED": "Hubo un problema con la autenticación de su sesión. Por Favor tratar de regístrarse."
+        },
+        "SSF_DEPLOY_SERVICE": {
+            "TITLE": "Alerta de actualización",
+            "BODY": "Una actualización está lista para esta aplicación . ¿Quiziera actualizarlo ahora?",
+            "YES": "Si",
+            "NO": "No",
+            "UPDATING": "Espere a que la actualizacion de su aplicación concluya"
+        }
+    },
+    
+    
+    
+    "SIDE_MENU": 
+    {"HEADER": "Menú principal",
+        "DIVIDER_1": {
+            "HEADER": "Firmas",
+            "LOGOUT": "Cerrar sesión",
+            "SIGN_IN": "Registrarse",
+            "CREATE_REQUEST": "Crear Solicitud"
+        },
+        "DIVIDER_2": {
+            "HEADER": "Ajustes",
+            "MY_PROFILE": "Mi Perfil",
+            "FAQS": "FAQ",
+            "FEEDBACK": "Realimentación",
+            "REGISTER_FIRM": "Registro Firma",
+            "LOBBY": "Acerca de Promus"
+            
+        }
+    },
+    "LANDING_CTRL": {
+        "TITLE": "Casa",
+        "LOGIN": "Iniciar sesión",
+        "PROMUS": "Promus",
+        "EMAIL": "Email",
+        "PASSWORD": "Contraseña",
+        "REGISTER": "Registro",
+        "TUTORIAL": "Tutorial"
+    },
+    
+      "WIZARD": {
+        "TITLE": "INFO",
+        "SKIP": "Presiona Intro",
+        "NEXT": "Siguiente",
+        "PREVIOUS": "Anterior",
+        "START": "Comienzo",
+        "ADDING": "La adición de una Solicitud",
+        "LEARN": "Información sobre cómo los inquilinos y Gestores de propiedades se pueden beneficiar enormemente de esta aplicación .",
+        "PPM": "Promus Servicios de Gestión de la Propiedad",
+        "AFBA": "Una empresa con sede en App",
+         "AFBA_DEF": "Este producto está destinado a ser utilizado por una empresa. La aplicación no está destinado a ser utilizado independiente de una empresa .",
+         "PPM_DEF": "Promus (prō′-mŭs) es latin para el administrador . Promus es también el nombre de una aplicación que ayuda a los administradores de la propiedad de ser buenos administradores de las propiedades que gestionan.",
+        "TUTORIAL": "Tutorial"
+    },
+    
+    
+    "LOBBY": {
+        "PROMUS": "PROMUS",
+        "ABOUT": "Acerca de Promus",
+        "JARGON": "La aplicación permitirá automatizar la recepción , el seguimiento y el cumplimiento de las solicitudes de mantenimiento realizados por los inquilinos a empresas de administración de propiedades .",
+        "WELCOME": "Bienvenido a la Promus Property Managment App",
+        "GET": "Empieza",
+        "FAQ": "FAQ's",
+        "MANAGE_PROPERTIES": "Administrar Propiedades",
+        "MANAGE_REQUESTS": "Gestionar las Solicitudes",
+        "MANAGE_USERS": "Administrar Usuarios",
+        "CREATE_REQUEST": "Crear Solicitud",
+         "REQUEST_HISTORY": "Historial de Solicitudes",
+        "REGISTER": "Registro"
+    },
+
+    
+    "FORMS": {
+        "LOGIN_TITLE": "Iniciar sesión",
+        "CANCEL": "CANCELAR",
+        "REGISTER_TITLE": "Registro",
+        "REGISTER_FIRM_TITLE": "Registro Firma",
+        "INPUTS": {
+            "EMAIL": "Email",
+            "FIRM_NAME": "Firma Nombre",
+              "FIRST_NAME": "Nombre de pila",
+            "LAST_NAME": "Apellido",
+            "COUNTRY": "País",
+            "STATE": "Estado",
+            "CITY": "Ciudad",
+            "STREET": "Calle",
+            "ZIP": "Código postal",
+            "PHONE": "Teléfono",
+            "PHONE1": "Teléfono 1",
+            "PHONE2": "Teléfono 2",
+            "PASSWORD": "Contraseña",
+            "REPEAT_PASSWORD": "Repite la contraseña",
+            "EULA": "Acuerdo de licencia de usuario final",
+            "REMEMBER_ME": "Recuérdame"
+        },
+        "BUTTONS": {
+            "SUBMIT": "Enviar",
+            "REGISTER": "Registro",
+            "EULA": "EULA"
+        },
+        
+    
+        
+        "POPOVERS": {
+            "1": "La contraseña debe tener al menos 8 caracteres y contener uno de cada uno de los siguientes: Una letra mayúscula y minúscula , un número y un carácter especial , que incluyen , pero no están limitados a: ! @ # $"
+        }
+    }
+}

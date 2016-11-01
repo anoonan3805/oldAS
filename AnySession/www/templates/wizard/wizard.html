@@ -1,0 +1,33 @@
+<ion-view view-title="WIZARD" hide-nav-bar="false" hide-back-button="true">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear no-animation" ui-sref="login" ng-show="!slideIndex">
+            <strong>{{'WIZARD.SKIP' | translate }}</strong>
+          </button>
+        <button class="button button-clear no-animation" ng-click="previous()" ng-show="slideIndex > 0">
+            <strong>{{'WIZARD.PREVIOUS' | translate }}</strong>
+          </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear no-animation" ng-click="next()" ng-show="slideIndex != 2">
+            <strong>{{'WIZARD.NEXT' | translate }}</strong>
+          </button>
+        <button class="button button-clear no-animation" ng-click="startApp()" ng-show="slideIndex == 2">
+            <strong>{{'WIZARD.START' | translate }}</strong>
+          </button>
+    </ion-nav-buttons>
+
+
+    <ion-content style="background-image: url('../img/Any Session.jpg'); background-size: cover" scroll="false">
+
+        <center>
+
+            <button ui-sref="navigation">
+                Debugging Navigation
+            </button>
+        </center>
+    </ion-content>
+
+
+
+
+</ion-view>

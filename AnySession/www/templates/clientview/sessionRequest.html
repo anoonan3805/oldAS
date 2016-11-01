@@ -1,0 +1,32 @@
+<ion-view view-title="Book" hide-back-button="false">
+    <ion-nav-buttons side="left" ui-sref="clientTabs.landing">
+           <!--<i class="ion-ios-arrow-back" ui-sref="clientTabs.landing"></i> -->
+    </ion-nav-buttons>
+    <ion-content>
+        
+        <h1 class="padding">Session Request</h1>
+
+            
+     <p class="padding">You are requesting to schedule with Kathryn de Bruin</p>
+
+<div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-calendar placeholder-icon"></i>
+    <input type="date" placeholder="Date">
+  </label><br>
+</div>
+
+
+<ion-list>
+  <ion-radio ng-model="choice" ng-value="'A'">8:00am</ion-radio>
+  <ion-radio ng-model="choice" ng-value="'B'">9:30am</ion-radio>
+  <ion-radio ng-model="choice" ng-value="'C'">2:00pm</ion-radio>
+  <ion-radio ng-model="choice" ng-value="'D'">8:00pm</ion-radio>
+</ion-list><br>
+
+
+<button class="button button-block button-balanced" ui-sref="reserveSession">
+  Reserve
+</button>
+    </ion-content>
+    </ion-vew>

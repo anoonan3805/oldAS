@@ -1,0 +1,27 @@
+<ion-view view-title="Etienne de Bruin">
+     <ion-nav-buttons side="right">
+        <button class="button button-clear icon ion-ios-home" ui-sref="TherapistLanding">
+            
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <br><br>
+     <div ng-repeat="note in notesRequestmade">
+            <p>
+                <strong>{{'REQUESTS.COMMENT ' | translate}} </strong> {{note.text}} <br> 
+                <strong>{{'REQUESTS.ON ' | translate}}</strong> {{note.date | date:'medium'}} <br> 
+                <strong> {{'REQUESTS.USER ' | translate}}</strong>  {{note.userIdInfo.firstName}}  {{note.userIdInfo.lastName}} <br>
+            </p>
+        </div>
+        <!--form starts here  notes form -->
+        <form name="chatBox" ng-click="submitNote(chatBox)" novalidate>
+            <label class="item item-input">
+                <textarea placeholder="Messages between you and Etienne"  ng-model="notes.text" required></textarea>
+            </label>
+            <button class="button button-full button-balanced" type="submit">
+                Send<!--{{'REQUESTS.ADD_NOTE ' | translate}} -->
+            </button>
+    </form>
+   
+    </ion-content>
+</ion-view>

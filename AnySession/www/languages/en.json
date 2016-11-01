@@ -1,0 +1,238 @@
+{
+    "APP": {
+        "NAME": "Any Session"
+    },
+    "GENERAL": {
+        "BACK": "Back",
+        "ERROR": "Error",
+        "EMPTY": "Data Not Available"
+    },
+     "FAQ": {
+            "HIDE": "Hide",
+            "QUESTION": "Question",
+            "ANSWER": "Answer"
+        },
+    
+    "REQUESTS": {
+        "ADD_AND_EDIT_REQUESTS" : "Add/Edit Requests",
+        "REQUEST_LIST"    :"Request List",
+        "REQUESTS" :  "Requests",
+        "PROPERTY_NAME" :  "Property Name",
+        "REQUEST" :  "Request",
+        "StartDate" :  "Start Date",
+        "COMMENT" :  "Comment",
+        "ISSUES" :  "Issues",
+        "SEARCH" :  "Search",
+        "USER" :  "User",
+        "NEWALERT" :  "Please complete your request before submitting.",
+        "NEWALERT2" :  "No data available,try later",
+        "FINISH_BY" :  "Finish By",
+        "ON" :  "On",
+        "BY" :  "By",
+        "MY_REQUESTS"  :  "My Requests",
+        "SINGLE_REQUEST_VIEW" :  "Single Request View",
+        "UNIT_NUMBER"  : "Unit Number",
+        "SUBJECT"  :  "Subject", 
+        "DESCRIPTION"  :  "Description",
+        "PRIORITY"  :  "Priority",
+        "STATUS" : "Status",
+        "ASSIGN_TO" : "Assign To", 
+        "REQUESTOR"  :  "Requestor", 
+        "COMP_DATE"  : "Comp Date",
+        "ADD_NOTE"  :"Add Note",
+        "SUBMIT"  : "Submit",
+        "APT_NUM_PLACE"  : "Apartment Number",
+        "PROBLEM_TEST_INFO"  : "Light Bulbs Broken",
+        "DATE_TEST_INFO"  : "YYYY-MM-DD",
+        "SUBJECT_PLACEHOLDER"  : "Broken Glass",
+        "NOTES"  :  "Notes",
+        "TASK_NUM": "Request #"
+    },
+   
+    "PROPERTIES": {
+        "FORM_ALERT" :  "Please complete the required information.",
+        "ADD_AND_EDIT_PROPERTIES" : "Add/Edit Property",
+        "PROPERTY_LIST"    :"Property List",
+        "PROPERITES" :  "Properties",
+        "PROPERTY_NAME" :  "Property Name",
+        "PROPERTY" :  "Property",
+        "OWNER" :  "Owner",
+        "TYPE" :   "Type ",
+        "SUBTYPE" :  "Subtype",
+        "SEARCH" :  "Search ",
+        "UNITS" :  "Number of Units",
+        "DESCRIPTION" :  "Description",
+        "STREET_ADDRESS" :  "Address",
+        "STREET_EXAMPLE" :"55 Main Street",
+        "COUNTRY" :  "Country",
+        "STATE" :  "State/Territory",
+        "CITY"  :  "City",
+        "ZIPCODE" :  "Zip Code",
+        "URL"  :  "URL",
+        "URL_PLACEHOLDER": "https://www.mycompanywebsite.com",
+        "SAVE_BUTTON"  : "Save",
+        "SINGLE_PROPERTY": "Single Property View",
+        "PHOTO": "Photo",
+        "PHOTO_PH": "Paste image URL here",
+        "SELECT_TYPE": "Select type",
+        "SELECT_SUB": "Select subtype"
+    },
+    
+    "FIRM_USERS": {
+        "ADD_AND_EDIT_USERS" : "Add/Edit Users",
+        "USERS"    : "Users",
+        "FIRMS" :  "Firm",
+        "PREF_METHOD" :  "Preferred Contact",
+        "PHONE1" :  "Phone 1",
+        "PHONE2" :  "Phone 2",
+        "TENANT" :  "Tenant",
+        "LEAD" :  "Lead",
+        "MANAGER" :  "Manager",
+         "WEBSITE" :  "Website",
+        "EMAIL" :   "Email",
+        "SUBJECT" :   "Subject",
+        "PROPERITES" :  "Properties",
+        "USER_TYPE" :  "User Type",
+        "SUBMIT_BUTTON" :  "Submit",
+        "SEARCH" :  "Search ",
+        "MY_PROFILE" :  "My Profile",
+        "PROPERTIES" :  "Properties",
+        "STREET_ADDRESS" :  "Address",
+        "REQUESTS" :  "Requests",
+        "REQUEST" :  "Request",
+        "CREATION_DATE" :  "Creation Date",
+            "ESTIMATED_DATE" :  "Estimated Completion",
+        "COMPLETION_DATE"  :  "Completion Date",
+        "COMPLETED_ON"  :  "Date Completed",
+        "ZIPCODE" :  "Zip Code",
+        "URL"  :  "Website"
+    
+    },
+    
+    "ERROR": {
+        "TITLE": "Error",
+        "OFFLINE": "We cannot complete this action while you are offline.",
+        "INCOMPLETE_FORM": "Check to make sure all required fields are filled in.",
+        "INTERNET_CONNECTION": "Please connect to the internet and try again.",
+        "ACCEPT_EULA": "You must first accept our End User License Agreement in order to register with us.",
+        "PASSWORDS_UNMATCHED": "Your passwords do not match.",
+        "EMAIL_TAKEN": "That email has already been used.",
+        "SOME_RETRY_ERROR": "Something went wrong, would you like to try again?"
+    },
+    "SSF_CONFIG_CONSTANTS": {
+        "SSF_ALERTS_SERVICE": {
+            "OKAY": "OK",
+            "CANCEL": "Cancel"
+        },
+        "SSF_CACHE_SERVICE": {
+            "TITLE": "Error",
+            "OFFLINE": "We could not retrieve your data while you are offline.",
+            "UNREGISTERED": "There was a problem with authenticating your session. Please sign in."
+        },
+        "SSF_DEPLOY_SERVICE": {
+            "TITLE": "Update Alert",
+            "BODY": "An update is ready for this application. Do you want to update now?",
+            "YES": "Yes",
+            "NO": "No",
+            "UPDATING": "Wait while we update your application"
+        }
+    },
+    
+    
+    
+    "SIDE_MENU": {
+        "HEADER": "Main Menu",
+        "DIVIDER_1": {
+            "HEADER": "Firms",
+            "LOGOUT": "Logout",
+            "SIGN_IN": "Sign In",
+            "CREATE_REQUEST": "Create Request"
+        },
+        "DIVIDER_2": {
+            "HEADER": "Settings",
+            "MY_PROFILE": "My Profile",
+            "FAQS": "FAQ",
+            "FEEDBACK": "Feedback",
+            "REGISTER_FIRM": "Register Firm",
+            "LOBBY": "About Promus"
+        }
+    },
+    "LANDING_CTRL": {
+        "TITLE": "Home",
+        "LOGIN": "Login",
+        "PROMUS": "Promus",
+        "EMAIL": "Email",
+        "PASSWORD": "Password",
+        "REGISTER": "Register",
+        "TUTORIAL": "Tutorial"
+    },
+    
+      "WIZARD": {
+        "TITLE": "INFO",
+        "SKIP": "Skip Intro",
+        "NEXT": "Next",
+        "PREVIOUS": "Previous",
+        "START": "Start",
+        "ADDING": "Adding a Request",
+        "LEARN": "Promus allows you to add or edit your maintenance requests. You can also track the progress and history of previous requests.",
+        "PPM": "Promus Property Management Services",
+        "AFBA": "A Firm Based App",
+         "AFBA_DEF": " This product is intended to be used by a company. The app is not meant to be used independant of a firm.",
+         "PPM_DEF": "Promus (prō′-mŭs) is latin for steward. Promus is also the name of an application that helps property managers be good stewards for the properties they manage.",
+        "TUTORIAL": "Tutorial"
+    },
+    
+    
+    "LOBBY": {
+        "PROMUS": "PROMUS",
+        "ABOUT": "About Promus",
+        "JARGON": "Promus helps to streamline the receiving, tracking and fulfilling of maintenance requests for tenants and property management firms.",
+        "WELCOME": "Welcome to the Promus Property Managment App",
+        "GET": "Get Started",
+        "FAQ": "FAQ's",
+        "MANAGE_PROPERTIES": "Manage Properties",
+        "MANAGE_REQUESTS": "Manage Requests",
+        "MANAGE_USERS": "Manage Users",
+        "CREATE_REQUEST": "Create Request",
+         "REQUEST_HISTORY": "Request History",
+        "REGISTER": "Register"
+    },
+
+    
+    
+    "FORMS": {
+        "LOGIN_TITLE": "Login",
+        "CANCEL": "CANCEL",
+        "REGISTER_TITLE": "Register",
+        "REGISTER_FIRM_TITLE": "Register Firm",
+        "INPUTS": {
+            "EMAIL": "Email",
+            "FIRM_NAME": "Firm Name",
+              "FIRST_NAME": "First Name",
+            "LAST_NAME": "Last Name",
+            "COUNTRY": "Country",
+            "STATE": "State",
+            "CITY": "City",
+            "STREET": "Street",
+            "ZIP": "Zip",
+            "PHONE": "Phone",
+            "PHONE1": "Phone 1",
+            "PHONE2": "Phone 2",
+            "PASSWORD": "Password",
+            "REPEAT_PASSWORD": "Repeat Password",
+            "EULA": "End User License Agreement",
+            "REMEMBER_ME": "Remember Me"
+        },
+        "BUTTONS": {
+            "SUBMIT": "Submit",
+            "REGISTER": "Register",
+            "EULA": "EULA"
+        },
+        
+    
+        
+        "POPOVERS": {
+            "1": "Your password must be at least 8 characters long and contain one of each of the following: An upper and lower case letter, a number, and a special character which include, but are not limited to: ! @ # $"
+        }
+    }
+}
